@@ -1,0 +1,66 @@
+<mvc:View controllerName="com.kages.bewa.becos.tagesarbeit.Etikettendruck.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}" showHeader="false">
+				<subHeader>
+					<Bar>
+						<contentMiddle>
+							<Label text="Barcode:"/>
+							<SearchField width="12em" placeholder="13 stellig"/>
+						</contentMiddle>
+					</Bar>
+				</subHeader>
+				<content>
+					<VBox>
+						<f:SimpleForm editable="true" layout="ResponsiveGridLayout" singleContainerFullSize="false">
+							<f:content>
+								<Toolbar>
+									<Title text="Daten"/>
+								</Toolbar>
+								<Label text="Personalzahl"/>
+								<Text text="922671"/>
+								<Label text="KH"/>
+								<Text text="K02 - LKH"/>
+								<Toolbar>
+									<ToolbarSpacer/>
+									<Button text="Drucken &amp; Speichern" icon="sap-icon://print"/>
+								</Toolbar>
+								<Label text="Name"/>
+								<Text text="Ninaus"/>
+								<Label text="KST"/>
+								<Text text="111106"/>
+							</f:content>
+						</f:SimpleForm>
+						<Table>
+							<columns>
+								<Column width="12em">
+									<Text text="Barcode"/>
+								</Column>
+								<Column>
+									<Text text="Artikelnummer"/>
+								</Column>
+								<Column minScreenWidth="Desktop" demandPopin="true">
+									<Text text="Artikelbezeichnung"/>
+								</Column>
+								<Column>
+									<Text text="Einzug"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="123456"/>
+										<Text text="1234567"/>
+										<Text text="Test"/>
+										<Text text="Test"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
