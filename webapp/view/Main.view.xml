@@ -7,7 +7,7 @@
 					<Bar>
 						<contentMiddle>
 							<Label text="Barcode:"/>
-							<SearchField width="12em" placeholder="13 stellig"/>
+							<SearchField width="12em" placeholder="8 stellig"/>
 						</contentMiddle>
 					</Bar>
 				</subHeader>
@@ -22,6 +22,18 @@
 								<Text text="922671"/>
 								<Label text="KH"/>
 								<Text text="K02 - LKH"/>
+								<Label text="Etikett-KH"/>
+								<ActionSelect items="{mockupData>/kh}">
+									<core:Item key="{mockupData>name}" text="{mockupData>name}"/>
+								</ActionSelect>
+								<Label text="Etikett-KST"/>
+								<ActionSelect items="{mockupData>/kst}">
+									<core:Item key="{mockupData>name}" text="{mockupData>name}"/>
+								</ActionSelect>
+								<Label text="Anlieferstelle"/>
+								<ActionSelect items="{mockupData>/anlieferstelle}">
+									<core:Item key="{mockupData>name}" text="{mockupData>name}"/>
+								</ActionSelect>
 								<Toolbar>
 									<ToolbarSpacer/>
 									<Button text="Drucken &amp; Speichern" icon="sap-icon://print"/>
@@ -30,30 +42,40 @@
 								<Text text="Ninaus"/>
 								<Label text="KST"/>
 								<Text text="111106"/>
+								<Label text="Etikett-KH (Bez.)"/>
+								<Text text="LKH Univ.Klinikum Graz"/>
 							</f:content>
 						</f:SimpleForm>
 						<Table>
 							<columns>
-								<Column width="12em">
+								<Column width="8em">
 									<Text text="Barcode"/>
 								</Column>
-								<Column>
+								<Column width="16em">
 									<Text text="Artikelnummer"/>
 								</Column>
 								<Column minScreenWidth="Desktop" demandPopin="true">
 									<Text text="Artikelbezeichnung"/>
 								</Column>
-								<Column>
+								<Column width="6em" hAlign="Center">
 									<Text text="Einzug"/>
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem>
 									<cells>
-										<Text text="123456"/>
-										<Text text="1234567"/>
-										<Text text="Test"/>
-										<Text text="Test"/>
+										<Text text="00000003"/>
+										<Text text="I001217"/>
+										<Text text="KASACK Damen"/>
+										<core:Icon src="sap-icon://overlay" color="#8bc34a"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Text text="00000004"/>
+										<Text text="I010973"/>
+										<Text text="KASACK Herren"/>
+										<core:Icon src="sap-icon://overlay" color="#8bc34a"/>
 									</cells>
 								</ColumnListItem>
 							</items>
